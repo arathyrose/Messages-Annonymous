@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import { SubmitMessageContainer, ProfilePic, UserName, Question, Message, submitButton } from './styles';
-
+import { SubmitMessageContainer, ProfilePic, UserName, Question, Message, SubmitButton, BackButton } from './styles';
+import back from './back.png'
 function SubmitMessage(props) {
   let params = new URL(document.location).searchParams;
   let referee = params.get("ref");
@@ -20,9 +20,12 @@ function SubmitMessage(props) {
       <textarea rows="4" cols="50" autoFocus wrap="hard">
       </textarea>
     </Message>
-    <submitButton>
+    <SubmitButton>
       <button style={{ backgroundColor: '#63360D', color: "#fff" }}>SUBMIT</button>
-    </submitButton>
+    </SubmitButton>
+    <BackButton>
+      <img src={back} style={{ width: 30, height: 30, bottom: 0, right: 0, position: 'absolute' }} />
+    </BackButton>
   </SubmitMessageContainer>;
 }
 export default SubmitMessage;

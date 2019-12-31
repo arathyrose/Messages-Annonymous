@@ -30,8 +30,14 @@ export const Message = styled.div`
     margin-bottom:100px;    
 `;
 
-export const submitButton = styled.div`
+export const SubmitButton = styled.div`
     margin-bottom:10px;
     color: #63360D;
     font-size:12px;
+`;
+
+export const BackButton =styled.div`
+    margin-bottom:10px;
+    margin-right:10px;
+    align:right;
 `;
